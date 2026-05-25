@@ -1,0 +1,125 @@
+import { TrendingUp, DollarSign, BookOpen, Mic } from 'lucide-react'
+
+const stats = [
+  { icon: TrendingUp, value: '100M+', label: 'Monthly Views', color: '#c8ff00' },
+  { icon: DollarSign, value: '$10M→100M', label: 'ARR Growth', color: '#6366f1' },
+  { icon: BookOpen, value: '600+', label: 'Episodes Scripted', color: '#f59e0b' },
+  { icon: Mic, value: '3', label: 'Languages', color: '#10b981' },
+]
+
+export default function About() {
+  return (
+    <section id="about" className="section">
+      <div className="about">
+        <div className="about__left">
+          <span className="section-label reveal">About Me</span>
+          <h2 className="section-title reveal stagger-1">
+            A storyteller who<br />
+            <em>drives growth</em>
+          </h2>
+          <p className="about__text reveal stagger-2">
+            At <em>Triplespeed</em>, an app studio with multiple products, I headed
+            creator and influencer marketing end-to-end across their portfolio of apps -
+            driving 100M+ views per month and contributing to ARR growth from $10M to $100M.
+          </p>
+          <p className="about__text reveal stagger-3">
+            I sourced and negotiated CPM-based deals with US-based influencers, drafted
+            and sent out contracts, and managed the full lifecycle of marketing programs.
+            Alongside that, I built lead generation automation pipelines, ran paid media
+            testing on Meta Ads, and coordinated with external clipping agencies to
+            maximize content virality.
+          </p>
+          <p className="about__text reveal stagger-4">
+            Outside of work, I'm building personal projects like <em>FitMaxx</em> - an
+            AI-powered form analyzer, and <em>Playo Automation</em> - a Slack-triggered
+            venue booking bot. Also writing my debut novel, <em>Beyond the Walls</em>.
+          </p>
+        </div>
+
+        <div className="about__right">
+          <div className="about__stats">
+            {stats.map(({ icon: Icon, value, label, color }, i) => (
+              <div className={`about__stat reveal stagger-${i + 2}`} key={label}>
+                <div className="about__stat-icon" style={{ background: `${color}15`, color }}>
+                  <Icon size={22} />
+                </div>
+                <div className="about__stat-value">{value}</div>
+                <div className="about__stat-label">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        .about {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          gap: 80px;
+          align-items: center;
+        }
+        .about__text {
+          font-size: 1.05rem;
+          color: var(--color-text-secondary);
+          line-height: 1.8;
+          margin-bottom: 20px;
+        }
+        .about__text em {
+          color: var(--color-text);
+          font-style: normal;
+        }
+        .section-title em {
+          color: var(--color-accent);
+          font-style: italic;
+        }
+        .about__stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+        }
+        .about__stat {
+          background: var(--color-bg-card);
+          border: 1px solid var(--color-border);
+          border-radius: var(--border-radius);
+          padding: 32px 24px;
+          text-align: center;
+          transition: all var(--transition);
+        }
+        .about__stat:hover {
+          transform: translateY(-6px);
+          border-color: #333;
+          box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .about__stat-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 16px;
+        }
+        .about__stat-value {
+          font-size: 1.6rem;
+          font-weight: 800;
+          color: var(--color-text);
+          margin-bottom: 4px;
+          letter-spacing: -0.02em;
+        }
+        .about__stat-label {
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: var(--color-text-muted);
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+        }
+        @media (max-width: 768px) {
+          .about {
+            grid-template-columns: 1fr;
+            gap: 48px;
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
