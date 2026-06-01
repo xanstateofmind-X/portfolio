@@ -44,7 +44,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero__bio reveal stagger-3">
-              At Triplespeed, drove 100M+ monthly views and contributed to
+              Drove 100M+ monthly views and contributed to
               ARR growth from $10M to $100M.<br />
               Experienced in leading influencer and creator marketing programs end-to-end -
               sourcing US-based creators, negotiating CPM deals, managing contracts, and
