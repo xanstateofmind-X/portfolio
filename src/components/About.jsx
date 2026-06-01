@@ -30,9 +30,11 @@ export default function About() {
             maximize content virality.
           </p>
           <p className="about__text reveal stagger-4">
-            Outside of work, I'm building personal projects like <em>FitMaxx</em> - an
-            AI-powered form analyzer, and <em>Playo Automation</em> - a Slack-triggered
-            venue booking bot. Also writing my debut novel, <em>Beyond the Walls</em>.
+            Outside of work, currently building <em>Zenji</em> - an app that gamifies
+            learning for children with dyslexia and dyscalculia (MVP in progress).
+            Also built <em>FitMaxx</em>, an AI-powered form analyzer,
+            and <em>Playo Automation</em>, a Slack-triggered venue booking bot.
+            Writing my debut novel, <em>Beyond the Walls</em>.
           </p>
         </div>
 

@@ -1,4 +1,4 @@
-import { PenTool, Megaphone, Mic, Users, Sparkles } from 'lucide-react'
+import { PenTool, Megaphone, Mic, Users, Sparkles, Lightbulb } from 'lucide-react'
 
 const skillCategories = [
   {
@@ -25,6 +25,11 @@ const skillCategories = [
     icon: Sparkles,
     title: 'Content & Media',
     skills: ['Video Production', 'Social Media Management', 'Technical Visual Assets', 'Content Marketing'],
+  },
+  {
+    icon: Lightbulb,
+    title: 'Product & Strategy',
+    skills: ['MVP Development', 'User Research', 'App Studio Operations', 'Gamification Design', 'Cross-App Campaigns'],
   },
 ]
 

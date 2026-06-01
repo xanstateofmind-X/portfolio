@@ -161,17 +161,20 @@ export default function BookChapters() {
       <div className="book">
         <div className="book__layout">
           <div className="book__info">
-            <span className="section-label reveal">Published Work</span>
+            <span className="section-label reveal">Book</span>
             <h2 className="section-title reveal stagger-1">Beyond the<br /><em>Walls</em></h2>
             <div className="book__badge reveal stagger-2">
               <span className="book__badge-dot" />
-              Work in Progress - Unpublished
+              Work in Progress
             </div>
             <p className="book__desc reveal stagger-3">
-              A gripping narrative that explores the weight of caregiving, buried family
-              secrets, and the thin line between reality and memory. Follow Daniel as he
-              uncovers his father's hidden journal and tumbles into a world he was never
-              meant to find.
+              Some inheritances can't be buried.<br />
+              When Daniel discovers his father's journal beneath the floorboards, he uncovers
+              a truth no son should ever have to read. A childhood stolen. A mind fractured.
+              A spider that wouldn't stop talking.<br />
+              And a body that never should have been found.<br />
+              The walls always close in eventually.<br />
+              The only question is what's left when they do.
             </p>
             <p className="book__meta reveal stagger-4">
               By Sanskriti Birange &bull; Fiction &bull; 89 Pages

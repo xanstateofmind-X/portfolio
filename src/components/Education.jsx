@@ -8,13 +8,6 @@ const education = [
     active: false,
     description: 'A multidisciplinary degree blending performance, language, and behavioral science.',
   },
-  {
-    degree: 'Masters of Arts in English',
-    institution: 'Sikkim Manipal University',
-    period: 'Ongoing',
-    active: true,
-    description: 'Deepening expertise in English literature, critical theory, and advanced writing.',
-  },
 ]
 
 export default function Education() {

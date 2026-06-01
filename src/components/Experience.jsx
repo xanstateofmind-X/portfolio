@@ -2,30 +2,31 @@ const experiences = [
   {
     role: 'Head of Growth Marketing',
     company: 'Triplespeed',
-    period: '2024 - Present',
+    period: 'Nov 2025 - May 2026',
     description: 'Drove US Market Expansion, contributing to ARR growth from $10M to $100M. Orchestrated cross-platform influencer campaigns generating 100M+ views/month. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
     highlights: ['Growth Strategy', 'Influencer Marketing', 'Paid Media', 'Meta Ads'],
   },
   {
     role: 'Long-form Content Writer',
     company: 'Plivo',
-    period: '2024 - Present',
+    period: 'Mar 2025 - Nov 2025',
     description: 'Partnered with Caleb Friesen to produce high-retention, long-form video scripts on AI industry trends. Drove brand visibility on X through shareable content and technical visual assets.',
     highlights: ['AI Content', 'Brand Strategy', 'Long-form Writing', 'Technical Writing'],
   },
   {
-    role: 'Video Script Writer',
-    company: 'We Move Solutions',
-    period: '2017 - 2019',
-    description: 'Wrote interactive video scripts for office awareness and POSH-related scenarios, creating engaging educational content for workplace environments.',
-    highlights: ['Video Scripting', 'Corporate Training', 'Educational Content'],
-  },
-  {
     role: 'Junior Sub Editor',
     company: 'DashVerse',
-    period: '2017 - 2019',
+    period: '2024 - 2025',
     description: 'Scripted engaging comic panels and narrative arcs for a series spanning 600+ episodes. Authored screenplays and refined story pacing, character development, and dialogue.',
     highlights: ['Screenwriting', 'Comic Scripting', 'Narrative Design', 'Story Editing'],
+  },
+  {
+    role: 'Video Script Writer',
+    company: 'We Move Solutions',
+    period: '2023 - 2024',
+    badge: 'Internship',
+    description: 'Wrote interactive video scripts for office awareness and POSH-related scenarios, creating engaging educational content for workplace environments.',
+    highlights: ['Video Scripting', 'Corporate Training', 'Educational Content'],
   },
 ]
 
@@ -46,7 +47,10 @@ export default function Experience() {
                 <div className="exp__dot" />
               </div>
               <div className="exp__right">
-                <h3 className="exp__role">{exp.role}</h3>
+                <h3 className="exp__role">
+                  {exp.role}
+                  {exp.badge && <span className="exp__badge">{exp.badge}</span>}
+                </h3>
                 <span className="exp__company">{exp.company}</span>
                 <p className="exp__desc">{exp.description}</p>
                 <div className="exp__tags">
@@ -132,6 +136,20 @@ export default function Experience() {
           font-weight: 700;
           margin-bottom: 4px;
           letter-spacing: -0.01em;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+        .exp__badge {
+          font-size: 0.65rem;
+          font-weight: 600;
+          color: var(--color-accent);
+          background: var(--color-accent-dim);
+          padding: 3px 10px;
+          border-radius: 100px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
         }
         .exp__company {
           font-size: 0.85rem;

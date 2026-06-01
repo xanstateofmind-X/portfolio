@@ -44,8 +44,11 @@ export default function Hero() {
             </h1>
 
             <p className="hero__bio reveal stagger-3">
-              I scale brands through creator marketing, lead gen automation, and content
-              strategy - contributing to ARR growth from $10M to $100M and driving 100M+ views monthly.
+              Experienced in leading influencer and creator marketing programs end-to-end -
+              sourcing US-based creators, negotiating CPM deals, managing contracts, and
+              scaling campaigns across multiple apps. Skilled in building lead gen automation
+              pipelines and executing paid media strategy. At Triplespeed, drove 100M+ monthly
+              views and contributed to ARR growth from $10M to $100M.
             </p>
 
             <div className="hero__actions reveal stagger-4">
