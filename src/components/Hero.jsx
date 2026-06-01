@@ -141,16 +141,17 @@ export default function Hero() {
         .hero__grid {
           display: grid;
           grid-template-columns: 1fr 420px;
-          gap: 64px;
-          align-items: stretch;
+          gap: 48px;
+          align-items: center;
         }
         .hero__right {
           display: flex;
-          align-items: stretch;
+          align-items: center;
+          justify-content: flex-start;
         }
         .hero__portrait {
           width: 100%;
-          min-height: 520px;
+          height: 520px;
           border-radius: 24px;
           overflow: hidden;
           border: 1px solid rgba(255,255,255,0.08);
@@ -179,7 +180,8 @@ export default function Hero() {
           display: flex;
           gap: 12px;
           margin-bottom: 32px;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
+          white-space: nowrap;
         }
         .hero__tag {
           font-size: 0.7rem;
@@ -193,7 +195,7 @@ export default function Hero() {
         }
         .hero__name {
           font-family: var(--font-display);
-          font-size: clamp(4rem, 12vw, 9rem);
+          font-size: clamp(3.5rem, 10vw, 7.5rem);
           font-weight: 700;
           line-height: 0.95;
           letter-spacing: -0.03em;

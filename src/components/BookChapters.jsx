@@ -168,11 +168,6 @@ export default function BookChapters() {
               Work in Progress
             </div>
             <p className="book__desc reveal stagger-3">
-              Some inheritances can't be buried.<br />
-              When Daniel discovers his father's journal beneath the floorboards, he uncovers
-              a truth no son should ever have to read. A childhood stolen. A mind fractured.
-              A spider that wouldn't stop talking.<br />
-              And a body that never should have been found.<br />
               The walls always close in eventually.<br />
               The only question is what's left when they do.
             </p>
