@@ -103,9 +103,25 @@ export default function Footer() {
           color: var(--color-text-muted);
           transition: all var(--transition);
         }
-        .footer__socials a:hover {
-          color: var(--color-accent);
-          border-color: var(--color-accent);
+        .footer__socials a:nth-child(1):hover {
+          color: #fff;
+          background: #333;
+          border-color: #333;
+        }
+        .footer__socials a:nth-child(2):hover {
+          color: #fff;
+          background: #0A66C2;
+          border-color: #0A66C2;
+        }
+        .footer__socials a:nth-child(3):hover {
+          color: #fff;
+          background: #000;
+          border-color: #fff;
+        }
+        .footer__socials a:nth-child(4):hover {
+          color: #fff;
+          background: #EA4335;
+          border-color: #EA4335;
         }
         .footer__bottom {
           max-width: var(--max-width);

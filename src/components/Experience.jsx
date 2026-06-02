@@ -2,6 +2,7 @@ const experiences = [
   {
     role: 'Head of Growth Marketing',
     company: 'Triplespeed',
+    logo: '/logo-triplespeed.png',
     period: 'Nov 2025 - May 2026',
     description: 'Drove US Market Expansion, contributing to ARR growth from $10M to $100M. Orchestrated cross-platform influencer campaigns generating 100M+ views/month. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
     highlights: ['Growth Strategy', 'Influencer Marketing', 'Paid Media', 'Meta Ads'],
@@ -9,6 +10,7 @@ const experiences = [
   {
     role: 'Long-form Content Writer',
     company: 'Plivo',
+    logo: '/logo-plivo.png',
     period: 'Mar 2025 - Nov 2025',
     description: 'Partnered with Caleb Friesen to produce high-retention, long-form video scripts on AI industry trends. Drove brand visibility on X through shareable content and technical visual assets.',
     highlights: ['AI Content', 'Brand Strategy', 'Long-form Writing', 'Technical Writing'],
@@ -16,6 +18,7 @@ const experiences = [
   {
     role: 'Junior Sub Editor',
     company: 'DashVerse',
+    logo: '/logo-dashverse.png',
     period: '2024 - 2025',
     description: 'Scripted engaging comic panels and narrative arcs for a series spanning 600+ episodes. Authored screenplays and refined story pacing, character development, and dialogue.',
     highlights: ['Screenwriting', 'Comic Scripting', 'Narrative Design', 'Story Editing'],
@@ -23,8 +26,8 @@ const experiences = [
   {
     role: 'Video Script Writer',
     company: 'We Move Solutions',
+    logo: '/logo-wemove.png',
     period: '2023 - 2024',
-    badge: 'Internship',
     description: 'Wrote interactive video scripts for office awareness and POSH-related scenarios, creating engaging educational content for workplace environments.',
     highlights: ['Video Scripting', 'Corporate Training', 'Educational Content'],
   },
@@ -42,6 +45,9 @@ export default function Experience() {
             <div className={`exp__item reveal stagger-${i + 2}`} key={i}>
               <div className="exp__left">
                 <span className="exp__period">{exp.period}</span>
+                {exp.logo && (
+                  <img src={exp.logo} alt={exp.company} className="exp__logo" />
+                )}
               </div>
               <div className="exp__line">
                 <div className="exp__dot" />
@@ -104,6 +110,19 @@ export default function Experience() {
           font-weight: 600;
           color: var(--color-text-muted);
           letter-spacing: 0.02em;
+        }
+        .exp__logo {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          border-radius: 14px;
+          margin-top: 16px;
+          opacity: 0.9;
+          transition: opacity var(--transition), transform var(--transition);
+        }
+        .exp__item:hover .exp__logo {
+          opacity: 1;
+          transform: scale(1.05);
         }
         .exp__line {
           display: flex;

@@ -1,4 +1,4 @@
-import { BookOpen, Lock, ArrowRight } from 'lucide-react'
+import { Lock, ArrowRight } from 'lucide-react'
 import { useState } from 'react'
 import ChapterReader from './ChapterReader'
 
@@ -161,7 +161,7 @@ export default function BookChapters() {
       <div className="book">
         <div className="book__layout">
           <div className="book__info">
-            <span className="section-label reveal">Book</span>
+            <span className="section-label reveal">Novella</span>
             <h2 className="section-title reveal stagger-1">Beyond the<br /><em>Walls</em></h2>
             <div className="book__badge reveal stagger-2">
               <span className="book__badge-dot" />
@@ -180,10 +180,7 @@ export default function BookChapters() {
             <div className="book__cover">
               <div className="book__cover-spine" />
               <div className="book__cover-front">
-                <BookOpen size={40} strokeWidth={1.2} />
-                <h3>Beyond the Walls</h3>
-                <span>Sanskriti Birange</span>
-                <div className="book__cover-wip">WIP</div>
+                <img src="/book-cover.png" alt="Beyond the Walls" className="book__cover-img" />
               </div>
             </div>
           </div>
@@ -279,10 +276,16 @@ export default function BookChapters() {
           margin: 0 auto;
           position: relative;
           transform: rotateY(-8deg);
-          transition: transform 0.6s ease;
+          transition: transform 0.8s ease;
+          transform-style: preserve-3d;
         }
         .book__cover:hover {
-          transform: rotateY(0deg);
+          animation: bookSpin 0.6s ease-in-out;
+        }
+        @keyframes bookSpin {
+          0% { transform: rotateY(-8deg); }
+          50% { transform: rotateY(180deg); }
+          100% { transform: rotateY(352deg); }
         }
         .book__cover-spine {
           position: absolute;
@@ -297,44 +300,16 @@ export default function BookChapters() {
         }
         .book__cover-front {
           aspect-ratio: 3/4.2;
-          background: linear-gradient(145deg, #0f0f23 0%, #1a1a3e 40%, #16213e 100%);
           border-radius: 4px 12px 12px 4px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 40px 28px;
-          color: white;
+          overflow: hidden;
+          position: relative;
           border: 1px solid rgba(255,255,255,0.08);
           box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
         }
-        .book__cover-front svg { margin-bottom: 24px; opacity: 0.6; }
-        .book__cover-front h3 {
-          font-family: var(--font-display);
-          font-size: 1.5rem;
-          font-weight: 600;
-          margin-bottom: 8px;
-          line-height: 1.2;
-        }
-        .book__cover-front span {
-          font-size: 0.75rem;
-          color: rgba(255,255,255,0.5);
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          font-weight: 500;
-        }
-        .book__cover-wip {
-          position: absolute;
-          top: 16px;
-          right: 16px;
-          font-size: 0.6rem;
-          font-weight: 800;
-          color: #f59e0b;
-          background: rgba(245, 158, 11, 0.15);
-          padding: 4px 10px;
-          border-radius: 4px;
-          letter-spacing: 0.1em;
+        .book__cover-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         .book__chapters-title {
           font-size: 0.75rem;

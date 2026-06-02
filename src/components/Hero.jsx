@@ -43,16 +43,20 @@ export default function Hero() {
               Birange
             </h1>
 
-            <p className="hero__bio reveal stagger-3">
-              Drove 100M+ monthly views and contributed to
-              ARR growth from $10M to $100M.<br />
+            <p className="hero__metrics reveal stagger-3">
+              <span className="hero__metric">100M+ monthly views</span>
+              <span className="hero__metric-divider">/</span>
+              <span className="hero__metric">$10M → $100M ARR</span>
+            </p>
+
+            <p className="hero__bio reveal stagger-4">
               Experienced in leading influencer and creator marketing programs end-to-end -
-              sourcing US-based creators, negotiating CPM deals, managing contracts, and
+              sourcing US-based creators and influencers, negotiating CPM deals, managing contracts, and
               scaling campaigns across multiple apps. Skilled in building lead gen automation
               pipelines and executing paid media strategy.
             </p>
 
-            <div className="hero__actions reveal stagger-4">
+            <div className="hero__actions reveal stagger-5">
               <a href="#video" className="hero__btn hero__btn--primary">
                 Watch Video Resume
                 <ArrowDown size={16} />
@@ -62,7 +66,7 @@ export default function Hero() {
               </a>
             </div>
 
-            <div className="hero__socials reveal stagger-5">
+            <div className="hero__socials reveal stagger-6">
               <a href="https://github.com/xanstateofmind-X" target="_blank" rel="noopener noreferrer" className="hero__social">
                 <GithubIcon />
               </a>
@@ -86,10 +90,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero__scroll reveal stagger-6">
-        <div className="hero__scroll-line" />
-        <span>Scroll</span>
-      </div>
 
       <style>{`
         .hero {
@@ -141,7 +141,7 @@ export default function Hero() {
         }
         .hero__grid {
           display: grid;
-          grid-template-columns: 1fr 420px;
+          grid-template-columns: 1fr 460px;
           gap: 48px;
           align-items: center;
         }
@@ -152,7 +152,7 @@ export default function Hero() {
         }
         .hero__portrait {
           width: 100%;
-          height: 520px;
+          height: 560px;
           border-radius: 24px;
           overflow: hidden;
           border: 1px solid rgba(255,255,255,0.08);
@@ -196,24 +196,42 @@ export default function Hero() {
         }
         .hero__name {
           font-family: var(--font-display);
-          font-size: clamp(3.5rem, 10vw, 7.5rem);
-          font-weight: 700;
-          line-height: 0.95;
+          font-size: clamp(4rem, 11vw, 8rem);
+          font-weight: 800;
+          line-height: 0.92;
           letter-spacing: -0.03em;
           color: var(--color-text);
           margin: 0;
         }
         .hero__name--outline {
           color: transparent;
-          -webkit-text-stroke: 2px var(--color-text);
-          margin-bottom: 40px;
+          -webkit-text-stroke: 2.5px var(--color-text);
+          margin-bottom: 32px;
+        }
+        .hero__metrics {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 24px;
+          flex-wrap: wrap;
+        }
+        .hero__metric {
+          font-size: 1.3rem;
+          font-weight: 800;
+          color: var(--color-accent);
+          letter-spacing: -0.01em;
+        }
+        .hero__metric-divider {
+          font-size: 1.3rem;
+          color: var(--color-text-muted);
+          font-weight: 300;
         }
         .hero__bio {
-          font-size: 1.1rem;
+          font-size: 1rem;
           color: var(--color-text-secondary);
           line-height: 1.8;
           max-width: 560px;
-          margin-bottom: 40px;
+          margin-bottom: 36px;
         }
         .hero__actions {
           display: flex;
@@ -260,36 +278,35 @@ export default function Hero() {
           border-radius: 50%;
           border: 1px solid var(--color-border);
           color: var(--color-text-secondary);
-          transition: all var(--transition);
+          transition: all 0.3s ease;
         }
-        .hero__social:hover {
-          color: var(--color-accent);
-          border-color: var(--color-accent);
+        .hero__social:nth-child(1):hover {
+          color: #fff;
+          background: #333;
+          border-color: #333;
           transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
-        .hero__scroll {
-          position: absolute;
-          bottom: 40px;
-          right: 40px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 8px;
-          color: var(--color-text-muted);
-          font-size: 0.65rem;
-          font-weight: 600;
-          letter-spacing: 0.2em;
-          text-transform: uppercase;
+        .hero__social:nth-child(2):hover {
+          color: #fff;
+          background: #0A66C2;
+          border-color: #0A66C2;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(10,102,194,0.35);
         }
-        .hero__scroll-line {
-          width: 1px;
-          height: 60px;
-          background: linear-gradient(to bottom, var(--color-accent), transparent);
-          animation: scrollPulse 2s ease-in-out infinite;
+        .hero__social:nth-child(3):hover {
+          color: #fff;
+          background: #000;
+          border-color: #fff;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(255,255,255,0.15);
         }
-        @keyframes scrollPulse {
-          0%, 100% { opacity: 1; height: 60px; }
-          50% { opacity: 0.4; height: 40px; }
+        .hero__social:nth-child(4):hover {
+          color: #fff;
+          background: #EA4335;
+          border-color: #EA4335;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(234,67,53,0.35);
         }
         @media (max-width: 900px) {
           .hero__grid {
@@ -303,7 +320,6 @@ export default function Hero() {
           }
         }
         @media (max-width: 768px) {
-          .hero__scroll { display: none; }
           .hero__name { font-size: clamp(3rem, 15vw, 5rem); }
         }
       `}</style>

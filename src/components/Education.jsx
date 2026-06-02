@@ -4,6 +4,7 @@ const education = [
   {
     degree: 'Bachelor of Arts in Theatre Studies, English & Psychology',
     institution: 'Christ University',
+    logo: '/logo-christ.png',
     period: '2021 - 2024',
     active: false,
     description: 'A multidisciplinary degree blending performance, language, and behavioral science.',
@@ -21,7 +22,11 @@ export default function Education() {
           {education.map((edu, i) => (
             <div className={`edu__card reveal stagger-${i + 2}`} key={i}>
               <div className={`edu__icon ${edu.active ? 'edu__icon--active' : ''}`}>
-                <GraduationCap size={24} />
+                {edu.logo ? (
+                  <img src={edu.logo} alt={edu.institution} className="edu__logo-img" />
+                ) : (
+                  <GraduationCap size={24} />
+                )}
               </div>
               <div className="edu__content">
                 <div className="edu__top">
@@ -68,9 +73,9 @@ export default function Education() {
           box-shadow: 0 20px 60px rgba(0,0,0,0.3);
         }
         .edu__icon {
-          width: 56px;
-          height: 56px;
-          border-radius: 16px;
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
           background: rgba(255,255,255,0.04);
           border: 1px solid var(--color-border);
           color: var(--color-text-muted);
@@ -78,6 +83,12 @@ export default function Education() {
           align-items: center;
           justify-content: center;
           flex-shrink: 0;
+          overflow: hidden;
+        }
+        .edu__logo-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         .edu__icon--active {
           background: var(--color-accent-dim);

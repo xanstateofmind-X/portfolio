@@ -35,19 +35,15 @@ function App() {
       <main>
         <Hero />
         <About />
-        <div className="divider" />
         <VideoResume />
         <div className="divider" />
         <Experience />
-        <div className="divider" />
         <Skills />
         <div className="divider" />
         <Education />
-        <div className="divider" />
         <BookChapters />
         <div className="divider" />
         <Projects />
-        <div className="divider" />
         <Contact />
       </main>
       <Footer />
