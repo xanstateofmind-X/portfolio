@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { Send, Mail, MapPin, Phone, ArrowUpRight } from 'lucide-react'
+import { Send, Mail, MapPin, ArrowUpRight } from 'lucide-react'
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'sanskriti.birange@gmail.com', href: 'mailto:sanskriti.birange@gmail.com' },
   { icon: MapPin, label: 'Location', value: 'Indiranagar, Bengaluru', href: null },
-  { icon: Phone, label: 'Phone', value: '+91 95352 55814', href: 'tel:+919535255814' },
 ]
 
 export default function Contact() {
