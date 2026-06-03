@@ -57,12 +57,12 @@ export default function Hero() {
             </p>
 
             <div className="hero__actions reveal stagger-5">
-              <a href="#video" className="hero__btn hero__btn--primary">
-                Watch Video Resume
+              <a href="#contact" className="hero__btn hero__btn--primary">
+                Let's Talk
                 <ArrowDown size={16} />
               </a>
-              <a href="#contact" className="hero__btn hero__btn--ghost">
-                Let's Talk
+              <a href="#experience" className="hero__btn hero__btn--ghost">
+                View Experience
               </a>
             </div>
 

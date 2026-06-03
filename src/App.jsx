@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import VideoResume from './components/VideoResume'
 import About from './components/About'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
@@ -35,7 +34,6 @@ function App() {
       <main>
         <Hero />
         <About />
-        <VideoResume />
         <div className="divider" />
         <Experience />
         <Skills />
