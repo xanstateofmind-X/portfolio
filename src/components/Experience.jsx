@@ -197,14 +197,77 @@ export default function Experience() {
           border-radius: 100px;
           letter-spacing: 0.02em;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+          .exp .section-title { margin-bottom: 36px; }
           .exp__item {
-            grid-template-columns: 1fr;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: 36px 1fr auto;
+            grid-template-areas:
+              "logo company period"
+              "role role role"
+              "desc desc desc"
+              "tags tags tags";
+            column-gap: 12px;
+            row-gap: 4px;
+            padding: 24px 0;
           }
           .exp__line { display: none; }
+          .exp__left {
+            display: contents;
+            padding-top: 0;
+          }
+          .exp__right {
+            display: contents;
+          }
+          .exp__logo {
+            grid-area: logo;
+            width: 36px;
+            height: 36px;
+            margin-top: 0;
+            border-radius: 8px;
+            align-self: center;
+          }
+          .exp__company {
+            grid-area: company;
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            align-self: center;
+          }
           .exp__period {
-            color: var(--color-accent);
+            grid-area: period;
+            color: var(--color-text-muted);
+            font-size: 0.68rem;
+            display: flex;
+            align-items: center;
+            justify-self: end;
+          }
+          .exp__role {
+            grid-area: role;
+            font-size: 0.95rem;
+            flex-wrap: wrap;
+            margin-bottom: 0;
+            align-self: center;
+          }
+          .exp__desc {
+            grid-area: desc;
+            font-size: 0.84rem;
+            line-height: 1.65;
+            margin-bottom: 12px;
+            text-align: justify;
+          }
+          .exp__tags {
+            grid-area: tags;
+            gap: 6px;
+          }
+          .exp__tag {
+            font-size: 0.62rem;
+            padding: 3px 10px;
+          }
+          .exp__item:hover {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            margin-right: 0;
           }
         }
       `}</style>

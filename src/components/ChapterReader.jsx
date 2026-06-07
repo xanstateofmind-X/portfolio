@@ -216,10 +216,17 @@ export default function ChapterReader({ chapter, onClose, onPrev, onNext, totalC
             max-width: 100%;
           }
           .reader__body {
-            padding: 32px 24px;
+            padding: 24px 16px;
+            font-size: 0.95rem;
           }
           .reader__title {
-            font-size: 1.6rem;
+            font-size: 1.4rem;
+          }
+          .reader__header {
+            padding: 16px;
+          }
+          .reader__footer {
+            padding: 12px 16px;
           }
         }
       `}</style>

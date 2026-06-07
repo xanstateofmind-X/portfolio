@@ -390,9 +390,27 @@ export default function BookChapters() {
         @media (max-width: 768px) {
           .book__layout {
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 32px;
           }
-          .book__cover { width: 200px; }
+          .book__cover-wrap {
+            order: -1;
+          }
+          .book__cover { width: 180px; }
+          .book__desc {
+            font-size: 0.95rem;
+          }
+          .book__chapter {
+            padding: 20px;
+          }
+          .book__chapter-title {
+            font-size: 0.95rem;
+          }
+          .book__chapter-excerpt {
+            font-size: 0.8rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .book__cover { width: 160px; }
         }
       `}</style>
     </section>

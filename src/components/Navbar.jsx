@@ -151,12 +151,13 @@ export default function Navbar() {
           pointer-events: all;
         }
         .navbar__mobile-link {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           font-weight: 600;
           color: var(--color-text-secondary);
-          padding: 12px 24px;
+          padding: 14px 24px;
           transition: color var(--transition);
           font-family: var(--font-display);
+          letter-spacing: 0.02em;
         }
         .navbar__mobile-link:hover {
           color: var(--color-accent);
@@ -164,6 +165,9 @@ export default function Navbar() {
         @media (max-width: 900px) {
           .navbar__links, .navbar__cta { display: none; }
           .navbar__toggle { display: block; z-index: 1001; }
+          .navbar { padding: 16px 20px; }
+          .navbar--scrolled { padding: 12px 20px; }
+          .navbar__logo-img { height: 40px; }
         }
       `}</style>
     </nav>

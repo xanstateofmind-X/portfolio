@@ -155,10 +155,14 @@ input, textarea { font-family: inherit; }
 }
 
 @media (max-width: 768px) {
-  :root { --section-gap: 60px; }
+  :root { --section-gap: 48px; }
   .section { padding-left: 20px; padding-right: 20px; }
+  .section-title { font-size: clamp(2rem, 7vw, 2.8rem); }
 }
 
 @media (max-width: 480px) {
-  :root { --section-gap: 80px; }
+  :root { --section-gap: 40px; }
+  .section { padding-left: 16px; padding-right: 16px; }
+  .section-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .section-label { font-size: 0.6rem; letter-spacing: 0.15em; }
 }

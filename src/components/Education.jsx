@@ -135,8 +135,22 @@ export default function Education() {
           line-height: 1.7;
         }
         @media (max-width: 600px) {
-          .edu__card { flex-direction: column; gap: 16px; }
+          .edu__card {
+            flex-direction: column;
+            gap: 16px;
+            padding: 24px 20px;
+          }
           .edu__top { flex-direction: column; }
+          .edu__icon {
+            width: 52px;
+            height: 52px;
+          }
+          .edu__degree {
+            font-size: 1rem;
+          }
+          .edu__desc {
+            font-size: 0.85rem;
+          }
         }
       `}</style>
     </section>

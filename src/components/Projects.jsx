@@ -129,7 +129,19 @@ export default function Projects() {
           letter-spacing: 0.02em;
         }
         @media (max-width: 600px) {
-          .proj__grid { grid-template-columns: 1fr; }
+          .proj__grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+          .proj__card {
+            padding: 24px 20px;
+          }
+          .proj__title {
+            font-size: 1rem;
+          }
+          .proj__desc {
+            font-size: 0.85rem;
+          }
         }
       `}</style>
     </section>

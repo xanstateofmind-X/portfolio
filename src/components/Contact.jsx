@@ -198,8 +198,17 @@ export default function Contact() {
           color: white;
         }
         @media (max-width: 768px) {
-          .contact__layout { grid-template-columns: 1fr; }
+          .contact__layout {
+            grid-template-columns: 1fr;
+            gap: 32px;
+          }
           .contact__form-row { grid-template-columns: 1fr; }
+          .contact__info-item {
+            padding: 20px;
+          }
+          .contact__submit {
+            width: 100%;
+          }
         }
       `}</style>
     </section>

@@ -118,7 +118,33 @@ export default function About() {
         @media (max-width: 768px) {
           .about {
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 32px;
+          }
+          .about__text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            text-align: justify;
+          }
+          .about__stat {
+            padding: 24px 16px;
+          }
+          .about__stat-value {
+            font-size: 1.3rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .about__stats {
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+          }
+          .about__stat {
+            padding: 20px 12px;
+          }
+          .about__stat-value {
+            font-size: 1.1rem;
+          }
+          .about__stat-label {
+            font-size: 0.65rem;
           }
         }
       `}</style>

@@ -39,7 +39,7 @@ export default function Hero() {
             <h1 className="hero__name reveal stagger-1">
               Sanskriti
             </h1>
-            <h1 className="hero__name hero__name--outline reveal stagger-2">
+            <h1 className="hero__name hero__name--outline hero__name--last reveal stagger-2">
               Birange
             </h1>
 
@@ -311,16 +311,106 @@ export default function Hero() {
         @media (max-width: 900px) {
           .hero__grid {
             grid-template-columns: 1fr;
-            gap: 48px;
+            gap: 32px;
           }
           .hero__portrait {
-            min-height: 400px;
-            max-width: 360px;
+            height: 380px;
+            max-width: 300px;
             margin: 0 auto;
           }
         }
         @media (max-width: 768px) {
-          .hero__name { font-size: clamp(3rem, 15vw, 5rem); }
+          .hero {
+            padding: 90px 24px 48px;
+            min-height: 100vh;
+            align-items: flex-start;
+          }
+          .hero__grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+          }
+          .hero__left {
+            text-align: center;
+            display: contents;
+          }
+          .hero__top {
+            display: none;
+          }
+          .hero__name {
+            font-size: clamp(3rem, 14vw, 5rem);
+            text-align: center;
+            order: 1;
+          }
+          .hero__name--last {
+            display: none;
+          }
+          .hero__name:first-of-type::after {
+            content: ' B.';
+          }
+          .hero__metrics {
+            gap: 10px;
+            margin-bottom: 0;
+            justify-content: center;
+            order: 3;
+          }
+          .hero__metric {
+            font-size: 1.05rem;
+          }
+          .hero__right {
+            order: 4;
+          }
+          .hero__portrait {
+            height: 360px;
+            max-width: 260px;
+            border-radius: 20px;
+            margin: 0 auto;
+          }
+          .hero__bio {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+            line-height: 1.75;
+            max-width: 400px;
+            text-align: justify;
+            order: 5;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .hero__actions {
+            margin-bottom: 0;
+            justify-content: center;
+            order: 6;
+          }
+          .hero__btn {
+            font-size: 0.82rem;
+            padding: 14px 24px;
+          }
+          .hero__socials {
+            justify-content: center;
+            order: 7;
+          }
+          .hero__social {
+            width: 42px;
+            height: 42px;
+          }
+        }
+        @media (max-width: 480px) {
+          .hero {
+            padding: 80px 16px 40px;
+          }
+          .hero__portrait {
+            height: 320px;
+            max-width: 230px;
+          }
+          .hero__name {
+            font-size: clamp(2.5rem, 13vw, 4rem);
+          }
+          .hero__metric {
+            font-size: 0.9rem;
+          }
+          .hero__bio {
+            font-size: 0.82rem;
+          }
         }
       `}</style>
     </section>

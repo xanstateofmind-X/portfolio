@@ -122,7 +122,19 @@ export default function Skills() {
           .skills__grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 500px) {
-          .skills__grid { grid-template-columns: 1fr; }
+          .skills__grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+          }
+          .skills__card {
+            padding: 24px 20px;
+          }
+          .skills__card-title {
+            font-size: 0.9rem;
+          }
+          .skills__tag {
+            font-size: 0.7rem;
+          }
         }
       `}</style>
     </section>

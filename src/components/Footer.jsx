@@ -140,11 +140,22 @@ export default function Footer() {
         }
         .footer__heart { color: #ef4444; }
         @media (max-width: 768px) {
+          .footer {
+            padding: 36px 20px 20px;
+          }
           .footer__inner {
             flex-direction: column;
             text-align: center;
+            gap: 24px;
           }
-          .footer__links { flex-wrap: wrap; justify-content: center; }
+          .footer__links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+          }
+          .footer__logo-img {
+            height: 36px;
+          }
         }
       `}</style>
     </footer>
