@@ -20,6 +20,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [mobileOpen])
+
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
@@ -65,7 +70,7 @@ export default function Navbar() {
           top: 0;
           left: 0;
           right: 0;
-          z-index: 1000;
+          z-index: 10000;
           padding: 24px 32px;
           transition: all var(--transition);
         }
@@ -132,21 +137,24 @@ export default function Navbar() {
           position: fixed;
           top: 0;
           left: 0;
-          right: 0;
-          bottom: 0;
-          background: var(--color-bg, #0a0a0a);
+          width: 100vw;
+          height: 100vh;
+          height: 100dvh;
+          background: #0a0a0a;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           gap: 8px;
           opacity: 0;
+          visibility: hidden;
           pointer-events: none;
-          transition: opacity 0.3s ease;
-          z-index: 998;
+          transition: opacity 0.3s ease, visibility 0.3s ease;
+          z-index: 9999;
         }
         .navbar__mobile--open {
           opacity: 1;
+          visibility: visible;
           pointer-events: all;
         }
         .navbar__mobile-link {
@@ -163,7 +171,7 @@ export default function Navbar() {
         }
         @media (max-width: 900px) {
           .navbar__links, .navbar__cta { display: none; }
-          .navbar__toggle { display: block; z-index: 1001; }
+          .navbar__toggle { display: block; z-index: 10000; position: relative; }
           .navbar { padding: 16px 20px; }
           .navbar--scrolled { padding: 12px 20px; }
           .navbar__logo-img { height: 40px; }
