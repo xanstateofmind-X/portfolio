@@ -134,8 +134,7 @@ export default function Navbar() {
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(10, 10, 10, 0.98);
-          backdrop-filter: blur(24px);
+          background: var(--color-bg, #0a0a0a);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -143,8 +142,8 @@ export default function Navbar() {
           gap: 8px;
           opacity: 0;
           pointer-events: none;
-          transition: opacity 0.4s ease;
-          z-index: 999;
+          transition: opacity 0.3s ease;
+          z-index: 998;
         }
         .navbar__mobile--open {
           opacity: 1;
