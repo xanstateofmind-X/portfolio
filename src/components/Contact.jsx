@@ -8,12 +8,29 @@ const contactInfo = [
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
-    setTimeout(() => setSubmitted(false), 3000)
+    setStatus('sending')
+    try {
+      const res = await fetch('https://formspree.io/f/mdavgazd', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setStatus('sent')
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setStatus('idle'), 3000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 3000)
+      }
+    } catch {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 3000)
+    }
   }
 
   return (
@@ -68,8 +85,11 @@ export default function Contact() {
                 placeholder="What's on your mind?" rows={5} required
                 className="contact__input contact__textarea" />
             </div>
-            <button type="submit" className="contact__submit" disabled={submitted}>
-              {submitted ? 'Sent!' : <><Send size={16} /> Send Message</>}
+            <button type="submit" className="contact__submit" disabled={status !== 'idle'}>
+              {status === 'sending' ? 'Sending...' :
+               status === 'sent' ? 'Sent!' :
+               status === 'error' ? 'Failed — try again' :
+               <><Send size={16} /> Send Message</>}
             </button>
           </form>
         </div>
