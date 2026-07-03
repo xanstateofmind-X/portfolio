@@ -3,7 +3,7 @@ const experiences = [
     role: 'Head of Growth Marketing',
     company: 'Triplespeed',
     logo: '/logo-triplespeed.png',
-    period: 'Nov 2025 - May 2026',
+    period: 'Nov 2025 - Present',
     description: 'Drove US Market Expansion, contributing to ARR growth from $10M to $100M. Orchestrated cross-platform influencer campaigns generating 100M+ views/month. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
     highlights: ['Growth Strategy', 'Influencer Marketing', 'Paid Media', 'Meta Ads'],
   },
