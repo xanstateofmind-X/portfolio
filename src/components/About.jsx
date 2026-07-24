@@ -23,7 +23,7 @@ export default function About() {
           </p>
           <p className="about__text reveal stagger-3">
             I built lead generation automation pipelines, managed departmental finances
-            including international crypto payments, and drove US market expansion strategy.
+            including international payments, and drove US market expansion strategy.
             Wore multiple hats across business development, project delivery, and
             operational execution.
           </p>
