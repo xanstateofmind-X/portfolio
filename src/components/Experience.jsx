@@ -1,11 +1,11 @@
 const experiences = [
   {
-    role: 'Head of Growth Marketing',
+    role: "Founder's Office Generalist",
     company: 'Triplespeed',
     logo: '/logo-triplespeed.png',
     period: 'Nov 2025 - Present',
-    description: 'Drove US Market Expansion, contributing to ARR growth from $10M to $100M. Orchestrated cross-platform influencer campaigns generating 100M+ views/month. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
-    highlights: ['Growth Strategy', 'Influencer Marketing', 'Paid Media', 'Meta Ads'],
+    description: 'Worked directly with the founding team on US Market Expansion, contributing to ARR growth from $10M to $100M. Owned cross-functional initiatives spanning growth strategy, operations, finance, and go-to-market execution. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
+    highlights: ['Growth Strategy', 'Operations', 'Go-to-Market', 'Business Development'],
   },
   {
     role: 'Long-form Content Writer',
