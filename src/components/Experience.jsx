@@ -4,7 +4,7 @@ const experiences = [
     company: 'Triplespeed',
     logo: '/logo-triplespeed.png',
     period: 'Nov 2025 - Present',
-    description: 'Worked directly with the founding team on US Market Expansion, contributing to ARR growth from $10M to $100M. Owned cross-functional initiatives spanning growth strategy, operations, finance, and go-to-market execution. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
+    description: 'Worked directly with the founding team on US Market Expansion, driving 100M+ views per month. Owned cross-functional initiatives spanning growth strategy, operations, finance, and go-to-market execution. Automated lead generation pipelines and managed departmental finances including international crypto payments.',
     highlights: ['Growth Strategy', 'Operations', 'Go-to-Market', 'Business Development'],
   },
   {

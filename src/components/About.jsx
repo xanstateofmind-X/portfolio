@@ -19,7 +19,7 @@ export default function About() {
           <p className="about__text reveal stagger-2">
             At <em>Triplespeed</em>, a high-growth app studio, I worked directly out of the
             founder's office as a generalist - owning cross-functional initiatives across
-            growth, operations, and go-to-market, contributing to ARR growth from $10M to $100M.
+            growth, operations, and go-to-market, driving 100M+ views per month.
           </p>
           <p className="about__text reveal stagger-3">
             I built lead generation automation pipelines, managed departmental finances
