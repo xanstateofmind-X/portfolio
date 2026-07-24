@@ -9,7 +9,7 @@ const skillCategories = [
   {
     icon: Megaphone,
     title: 'Marketing & Growth',
-    skills: ['Influencer Marketing', 'Content Strategy', 'Meta Ads', 'Paid Media', 'Lead Generation', 'Brand Messaging'],
+    skills: ['Growth Strategy', 'Content Strategy', 'Go-to-Market', 'Lead Generation', 'Brand Messaging', 'Business Development'],
   },
   {
     icon: Mic,

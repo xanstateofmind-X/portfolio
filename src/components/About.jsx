@@ -1,8 +1,7 @@
-import { TrendingUp, DollarSign, BookOpen, Mic } from 'lucide-react'
+import { DollarSign, BookOpen, Mic } from 'lucide-react'
 
 const stats = [
-  { icon: TrendingUp, value: '100M+', label: 'Monthly Views', color: '#c8ff00' },
-  { icon: DollarSign, value: '$10M→100M', label: 'ARR Growth', color: '#6366f1' },
+  { icon: DollarSign, value: '$10M→100M', label: 'ARR Growth', color: '#c8ff00' },
   { icon: BookOpen, value: '600+', label: 'Episodes Scripted', color: '#f59e0b' },
   { icon: Mic, value: '3', label: 'Languages', color: '#10b981' },
 ]
@@ -18,16 +17,15 @@ export default function About() {
             <em>drives growth</em>
           </h2>
           <p className="about__text reveal stagger-2">
-            At <em>Triplespeed</em>, an app studio with multiple products, I headed
-            creator and influencer marketing end-to-end across their portfolio of apps -
-            driving 100M+ views per month and contributing to ARR growth from $10M to $100M.
+            At <em>Triplespeed</em>, a high-growth app studio, I worked directly out of the
+            founder's office as a generalist - owning cross-functional initiatives across
+            growth, operations, and go-to-market, contributing to ARR growth from $10M to $100M.
           </p>
           <p className="about__text reveal stagger-3">
-            I sourced and negotiated CPM-based deals with US-based influencers, drafted
-            and sent out contracts, and managed the full lifecycle of marketing programs.
-            Alongside that, I built lead generation automation pipelines, ran paid media
-            testing on Meta Ads, and coordinated with external clipping agencies to
-            maximize content virality.
+            I built lead generation automation pipelines, managed departmental finances
+            including international crypto payments, and drove US market expansion strategy.
+            Wore multiple hats across business development, project delivery, and
+            operational execution.
           </p>
           <p className="about__text reveal stagger-4">
             Outside of work, currently building <em>Zenji</em> - an app that gamifies

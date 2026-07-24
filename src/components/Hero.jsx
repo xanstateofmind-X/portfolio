@@ -31,9 +31,9 @@ export default function Hero() {
         <div className="hero__grid">
           <div className="hero__left">
             <div className="hero__top reveal">
-              <span className="hero__tag">Head of Growth Marketing</span>
-              <span className="hero__tag">Influencer Marketing</span>
-              <span className="hero__tag">Creator Marketing</span>
+              <span className="hero__tag">Founder's Office</span>
+              <span className="hero__tag">Growth & Strategy</span>
+              <span className="hero__tag">Creative Writing</span>
             </div>
 
             <h1 className="hero__name reveal stagger-1">
@@ -44,16 +44,14 @@ export default function Hero() {
             </h1>
 
             <p className="hero__metrics reveal stagger-3">
-              <span className="hero__metric">100M+ monthly views</span>
-              <span className="hero__metric-divider">/</span>
               <span className="hero__metric">$10M → $100M ARR</span>
             </p>
 
             <p className="hero__bio reveal stagger-4">
-              Experienced in leading influencer and creator marketing programs end-to-end -
-              sourcing US-based creators and influencers, negotiating CPM deals, managing contracts, and
-              scaling campaigns across multiple apps. Skilled in building lead gen automation
-              pipelines and executing paid media strategy.
+              Generalist at a high-growth app studio, working directly with founders on
+              cross-functional initiatives spanning growth strategy, operations, go-to-market
+              execution, and business development. Skilled in building lead gen automation
+              pipelines and driving end-to-end project delivery.
             </p>
 
             <div className="hero__actions reveal stagger-5">
