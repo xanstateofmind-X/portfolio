@@ -44,7 +44,7 @@ export default function Hero() {
             </h1>
 
             <p className="hero__metrics reveal stagger-3">
-              <span className="hero__metric">$10M → $100M ARR</span>
+              <span className="hero__metric">100M+ monthly views</span>
             </p>
 
             <p className="hero__bio reveal stagger-4">

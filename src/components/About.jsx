@@ -1,7 +1,7 @@
-import { DollarSign, BookOpen, Mic } from 'lucide-react'
+import { TrendingUp, BookOpen, Mic } from 'lucide-react'
 
 const stats = [
-  { icon: DollarSign, value: '$10M→100M', label: 'ARR Growth', color: '#c8ff00' },
+  { icon: TrendingUp, value: '100M+', label: 'Monthly Views', color: '#c8ff00' },
   { icon: BookOpen, value: '600+', label: 'Episodes Scripted', color: '#f59e0b' },
   { icon: Mic, value: '3', label: 'Languages', color: '#10b981' },
 ]
