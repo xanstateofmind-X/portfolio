@@ -2,11 +2,6 @@ import { PenTool, Megaphone, Mic, Users, Sparkles, Lightbulb } from 'lucide-reac
 
 const skillCategories = [
   {
-    icon: PenTool,
-    title: 'Creative Writing',
-    skills: ['Screenwriting', 'Long-form Scripts', 'Comic Scripting', 'Short Stories', 'Ad Copy', 'Narrative Design'],
-  },
-  {
     icon: Megaphone,
     title: 'Marketing & Growth',
     skills: ['Growth Strategy', 'Content Strategy', 'Go-to-Market', 'Lead Generation', 'Brand Messaging', 'Business Development'],
@@ -30,6 +25,11 @@ const skillCategories = [
     icon: Lightbulb,
     title: 'Product & Strategy',
     skills: ['MVP Development', 'User Research', 'App Studio Operations', 'Gamification Design', 'Cross-App Campaigns'],
+  },
+  {
+    icon: PenTool,
+    title: 'Creative Writing',
+    skills: ['Screenwriting', 'Long-form Scripts', 'Comic Scripting', 'Short Stories', 'Ad Copy', 'Narrative Design'],
   },
 ]
 
